@@ -213,6 +213,7 @@ function App() {
             <Route
                     path="/help"
                     render={() => <Help title="Help for MADNOTBAD" />}
+                    title="test"
                     
                 />
                    
