@@ -1,38 +1,327 @@
-.App {
-  text-align: center;
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    padding: 30px 0 40px 0;
+    margin: 0;
+    background: #4292c8;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#4292c8),
+        to(#fda753)
+    );
+    background: -o-linear-gradient(left, #4292c8 0%, #fda753 100%);
+    background: linear-gradient(to right, #4292c8 0%, #fda753 100%);
+    font-family: Oswald;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+    max-width: 850px;
+    margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo-wrap {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto 0;
+    text-align: center;
+    max-width: 780px;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-wrap picture {
+    width: 100%;
+    min-height: 380px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo-wrap .logo-h2 {
+    position: absolute;
+    font-size: 46px;
+    color: #344652;
+    font-weight: 900;
+    top: 105px;
+    letter-spacing: -1.5px;
+}
+
+.logo-wrap .logo-h2:first-child {
+    left: 0;
+}
+
+.logo-wrap .logo-h2:last-child {
+    right: 0;
+}
+
+.big-logo {
+    width: 380px;
+    height: 380px;
+}
+
+#app {
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    position: relative;
+    -webkit-filter: opacity(100%);
+    filter: opacity(100%);
+}
+
+.digital-wrap {
+    position: relative;
+    /* background-image: url("./BANNER.png"); */
+    height: 158px;
+    border-radius: 15px;
+    margin: 30px auto 30px;
+    border: 1px solid rgba(50, 70, 82, 0.2);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.digital-link {
+    font-size: 25px;
+    color: #344652;
+    font-weight: 900;
+    text-align: center;
+}
+
+.min-logo {
+    width: 140px;
+    height: 140px;
+}
+
+.social {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.social a {
+    color: #000;
+    font-size: 42px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    display: inline-block;
+    margin: 0 22px;
+    opacity: 0.5;
+    background: #fff;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 97px;
+    outline: none;
+}
+
+.social a i {
+    opacity: 1;
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+}
+
+.social a:hover {
+    opacity: 0.8;
+}
+
+.youtube-video {
+    margin-top: 35px;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.youtube-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services {
+    display: inline-block;
+    background: #ffffff;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    cursor: pointer;
+    height: 83px;
+    width: 180px;
+    margin: 0 3px;
+}
+
+.services__google_play {
+    background-image: url("services/music-service_itunes.png");
+    background-size: 138px 38px;
+}
+
+.services__soundcloud {
+    background-image: url("services/soundcloud.png");
+    background-size: 89px 51px;
+}
+
+.services__itunes {
+    background-image: url("services/itunes.png");
+    background-size: 112px 39px;
+}
+
+.services__apple_music {
+    background-image: url("services/apple_music.png");
+    background-size: 150px 50px;
+}
+
+.services__spotify {
+    background-image: url("services/spotify.png");
+    background-size: 124px 37px;
+}
+
+.services__deezer {
+    background-image: url("services/deezer.png");
+    background-size: 110px 25px;
+}
+
+.services__youtube_music {
+    background-image: url("services/youtube_music.png");
+    background-size: 150px 30px;
+}
+
+
+@media (max-width: 991.98px) {
+    .logo-wrap .logo-h2 {
+        width: 100%;
+        top: 271px;
+        font-size: 65px;
+    }
+
+    .logo-wrap .logo-h2:first-child,
+    .logo-wrap .logo-h2:last-child {
+        right: auto;
+    }
+
+    .big-logo {
+        width: 800px;
+        height: 800px;
+    }
+
+    .digital-link {
+        font-size: 45px;
+    }
+
+    .social a {
+        height: 150px;
+        width: 150px;
+        line-height: 150px;
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 860px) {
+    .digital-wrap {
+        height: auto;
+        padding: 15px 15px;
+        margin: 45px 15px;
+    }
+
+    .digital-link {
+        font-size: 45px;
+    }
+
+    .min-logo {
+        display: none;
+    }
+}
+
+@media (max-width: 770px) {
+    .logo-wrap .logo-h2 {
+        width: 100%;
+        top: 35vw;
+        font-size: 8vw;
+    }
+
+    .logo-wrap .logo-h2:first-child,
+    .logo-wrap .logo-h2:last-child {
+        left: -1.2vw;
+        right: auto;
+    }
+
+    .big-logo {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 589px) {
+    .social a {
+        margin-top: 20px;
+    }
+
+    .social a:last-child {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 391px) {
+    .social a:last-child {
+        margin-top: 20px;
+    }
+}
+
+.webp .digital-wrap {
+    /* background-image: url(./BANNER.webp); */
+}
+
+.webp .services__google_play {
+    /* background-image: url(./src/services/google_play.webp); */
+}
+
+.webp .services__soundcloud {
+    /* background-image: url(./src/services/soundcloud.webp); */
+}
+
+.webp .services__itunes {
+    /* background-image: url(./src/services/itunes.webp); */
+}
+
+.webp .services__apple_music {
+    /* background-image: url(./src/services/apple_music.webp); */
+}
+
+.webp .services__spotify {
+    /* background-image: url(./src/services/spotify.webp); */
+}
+
+.webp .services__deezer {
+    /* background-image: url(./src/services/deezer.webp); */
+}
+
+.webp .services__youtube_music {
+    /* background-image: url(./src/services/youtube_music.webp); */
 }
