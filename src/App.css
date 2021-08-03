@@ -140,7 +140,7 @@ body {
     transition: 0.1s;
 }
 
-.social a:hover {
+.social a:hover, .social a:focus {
     opacity: 0.8;
 }
 
