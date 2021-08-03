@@ -8,21 +8,71 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .modal__content{
+    transition: .3s;
+}
+.modal__content{
+    transition: .3s;
+    position: relative;
     text-align: center;
     font-size: 22px;
     padding: 100px 200px;
     border-radius: 20px;
     background: #4292c8;
-    background: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(#4292c8),
-        to(#fda753)
-    );
+    background: -webkit-gradient(linear,
+    left top,
+    right top,
+    from(#4292c8),
+    to(#fda753));
     background: -o-linear-gradient(left, #4292c8 0%, #fda753 100%);
     background: linear-gradient(to right, #4292c8 0%, #fda753 100%);
+
+}
+.close{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 33px;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #555;
+    transition: .3s;
+}
+.close:hover{
+    color: #fff;
+}
+
+@media (max-width: 860px) {
+    .modal__content{
+        padding: 90px 100px;
     
-  }
+    }
+
+}
+
+@media (max-width: 770px) {
+    .modal__content{
+        padding: 70px 50px;
+    
+    }
+
+}
+
+@media (max-width: 589px) {
+    .modal__content{
+        padding: 50px 20px;
+    
+    }
+
+}
+
+@media (max-width: 391px) {
+    
+    .modal__content{
+        padding: 40px 10px;
+    
+    }
+
+}
