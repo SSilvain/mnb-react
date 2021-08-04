@@ -11,7 +11,12 @@ let initialState = {
     status: "IMG",
     videos: [
         { id: "976LGx9NP0A", title: "Allsa", status: "img", idStatus: 0 },
-        { id: "r-VXB9LRMoo", title: "Ne zalishaj", status: "img", idStatus: 1 },
+        {
+            id: "r-VXB9LRMoo",
+            title: "Ne zalishaj",
+            status: "video",
+            idStatus: 1,
+        },
         {
             id: "tgL4BUJAgEo",
             title: "Kintseva zupynka",
@@ -26,9 +31,10 @@ let initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case "VIDEO":
+            console.log(action.videosNew);
             return {
                 ...state,
-                videos: action.videosNew
+                videos: action.videosNew,
             };
         default:
             return state;
@@ -38,13 +44,11 @@ const reducer = (state = initialState, action) => {
 let store = createStore(reducer);
 
 ReactDOM.render(
-    <React.StrictMode>
+    <Provider store={store}>
         <BrowserRouter>
-            <Provider store={store}>
-                <App />
-            </Provider>
+            <App />
         </BrowserRouter>
-    </React.StrictMode>,
+    </Provider>,
     document.getElementById("root")
 );
 
