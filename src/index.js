@@ -1,42 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import store from "./app/store"
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { createStore } from "redux";
+// import { createStore } from "redux";
 import { Provider } from "react-redux";
 
-let initialState = {
-    status: "IMG",
-    videos: [
-        { id: "976LGx9NP0A", title: "Allsa", status: "img", idStatus: 0 },
-        { id: "r-VXB9LRMoo", title: "Ne zalishaj", status: "img", idStatus: 1 },
-        {
-            id: "tgL4BUJAgEo",
-            title: "Kintseva zupynka",
-            status: "img",
-            idStatus: 2,
-        },
-        { id: "5MkNL1S75fU", title: "Ot sebyz", status: "img", idStatus: 3 },
-        { id: "SQkI6b4tBYU", title: "Z toboyu", status: "img", idStatus: 4 },
-    ],
-};
+// let initialState = {
+//     status: "IMG",
+//     videos: [
+//         { id: "976LGx9NP0A", title: "Allsa", status: "img", idStatus: 0 },
+//         { id: "r-VXB9LRMoo", title: "Ne zalishaj", status: "img", idStatus: 1 },
+//         {
+//             id: "tgL4BUJAgEo",
+//             title: "Kintseva zupynka",
+//             status: "img",
+//             idStatus: 2,
+//         },
+//         { id: "5MkNL1S75fU", title: "Ot sebyz", status: "img", idStatus: 3 },
+//         { id: "SQkI6b4tBYU", title: "Z toboyu", status: "img", idStatus: 4 },
+//     ],
+// };
 
-const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case "VIDEO":
-            console.log(action.videosNew);
-            return {
-                ...state,
-                videos: action.videosNew,
-            };
-        default:
-            return state;
-    }
-};
 
-let store = createStore(reducer);
+
+// let store = createStore(reducer);
 
 ReactDOM.render(
     <Provider store={store}>
