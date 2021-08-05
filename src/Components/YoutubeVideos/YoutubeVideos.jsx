@@ -5,12 +5,14 @@ const YoutubeVideos = () => {
 	
 
 	let dispatch = useDispatch();
-	let videos = useSelector(state => state.videos);
+	let state = useSelector(state => state);
+	
+	let videos = state.videos;
 
 	const changeStatus = (idStatus) => {
 		
 		videos[idStatus].status = "video";
-		let videosTmp = [...videos];
+		let videosTmp = videos;
 		
 		dispatch({ type: "VIDEO", videosNew: videosTmp });
 		console.log("ok");
