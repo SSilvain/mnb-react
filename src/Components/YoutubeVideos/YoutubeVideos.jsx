@@ -1,20 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import YoutubeVideo from "./YoutubeVideo/YoutubeVideo";
 
-
-let videosData = [
-	{ id: "976LGx9NP0A", title: "Allsa", status: "img", idStatus: 0 },
-	{ id: "r-VXB9LRMoo", title: "Ne zalishaj", status: "video", idStatus: 1 },
-	{
-		id: "tgL4BUJAgEo",
-		title: "Kintseva zupynka",
-		status: "img",
-		idStatus: 2,
-	},
-	{ id: "5MkNL1S75fU", title: "Ot sebyz", status: "img", idStatus: 3 },
-	{ id: "SQkI6b4tBYU", title: "Z toboyu", status: "img", idStatus: 4 },
-]
-
 const YoutubeVideos = () => {
 	
 
@@ -23,9 +9,10 @@ const YoutubeVideos = () => {
 
 	const changeStatus = (idStatus) => {
 		
-		videosData[idStatus].status = "video";
+		videos[idStatus].status = "video";
+		let videosTmp = [...videos];
 		
-		dispatch({ type: "VIDEO", videosNew: videosData });
+		dispatch({ type: "VIDEO", videosNew: videosTmp });
 		console.log("ok");
 
 

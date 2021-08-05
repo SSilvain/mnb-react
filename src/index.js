@@ -11,12 +11,7 @@ let initialState = {
     status: "IMG",
     videos: [
         { id: "976LGx9NP0A", title: "Allsa", status: "img", idStatus: 0 },
-        {
-            id: "r-VXB9LRMoo",
-            title: "Ne zalishaj",
-            status: "video",
-            idStatus: 1,
-        },
+        { id: "r-VXB9LRMoo", title: "Ne zalishaj", status: "img", idStatus: 1 },
         {
             id: "tgL4BUJAgEo",
             title: "Kintseva zupynka",
