@@ -22,7 +22,7 @@ function App() {
                     <h2 className="logo-h2">MADNOTBAD</h2>
                     <picture>
                         <source
-                            srcset="img/cross-shadow.svg"
+                            srcSet="img/cross-shadow.svg"
                             type="image/webp"
                         />
                         <img
@@ -42,7 +42,7 @@ function App() {
                     <div className="digital-wrap">
                         <picture>
                             <source
-                                srcset="img/cross-shadow.svg"
+                                srcSet="img/cross-shadow.svg"
                                 type="image/webp"
                             />
                             <img
@@ -56,7 +56,7 @@ function App() {
                         </NavLink>
                         <picture>
                             <source
-                                srcset="img/cross-shadow.svg"
+                                srcSet="img/cross-shadow.svg"
                                 type="image/webp"
                             />
                             <img

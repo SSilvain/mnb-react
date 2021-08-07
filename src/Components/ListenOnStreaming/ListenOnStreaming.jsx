@@ -3,7 +3,7 @@ const ListenOnStreaming = () => {
 		<div className="digital-wrap">
 			<picture>
 				<source
-					srcset="img/cross-shadow.svg"
+					srcSet="img/cross-shadow.svg"
 					type="image/webp"
 				/>
 				<img
@@ -14,6 +14,7 @@ const ListenOnStreaming = () => {
 			</picture>
 			<a
 				target="_blank"
+				rel="noreferrer"
 				href="https://ffm.to/mv6z8jo"
 				className="digital-link"
 			>
@@ -21,7 +22,7 @@ const ListenOnStreaming = () => {
 			</a>
 			<picture>
 				<source
-					srcset="img/cross-shadow.svg"
+					srcSet="img/cross-shadow.svg"
 					type="image/webp"
 				/>
 				<img

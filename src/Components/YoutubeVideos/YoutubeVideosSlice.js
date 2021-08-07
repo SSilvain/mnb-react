@@ -1,10 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const slice = createSlice({
-    name: "yotubevideos",
+    name: "yotubevideosActions",
     initialState: {
         videos: [
-            { id: "976LGx9NP0A", title: "Allsa", status: "img", idStatus: 0 },
+            {
+                id: "976LGx9NP0A",
+                title: "Allsa",
+                status: "img",
+                idStatus: 0
+            },
             {
                 id: "r-VXB9LRMoo",
                 title: "Ne zalishaj",
@@ -33,7 +38,7 @@ export const slice = createSlice({
     },
     reducers: {
         statusvideo: (state, action) => {
-            state.videos[action.payload].status = "video";
+            // state.videos[action.payload].status = "video";
             return state;
         },
         consolevideo: (state, action) => {

@@ -7,12 +7,30 @@ const YoutubeVideo = (props) => {
 	const doChangeStatus = () => {
 		props.changeStatus(props.idStatus);
 	};
+	const getImg = () => {
+		fetch(`https://i.ytimg.com/vi_webp/${props.id}/maxresdefault.webp`, {
+			method: 'get', // GET, POST, PUT, DELETE, etc.
+			mode: 'no-cors', // no-cors, *cors, same-origin
+		})
+			.then(response => console.log(response))
+			// .then(data => console.log(data));
+		// console.log(tmpFetch.status);
+		// var img = new Image();
+		// img.src = `https://i.ytimg.com/vi_webp/${props.id}/maxresdefault.webp`;
+		// img.onload = function () { console.log("load") };
+		// img.onerror = function () { console.log("error") };
+
+		return `https://i.ytimg.com/vi_webp/${props.id}/maxresdefault.webp`;
+
+	}
+
 
 	switch (props.status) {
 		case "video":
 			return (
 				<div className={s.youtubeVideo}>
 					<iframe
+						title={props.title}
 						src={"https://www.youtube.com/embed/" + props.id + "?rel=0&showinfo=0&autoplay=1"}
 						frameborder="0"
 						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
@@ -21,13 +39,13 @@ const YoutubeVideo = (props) => {
 				</div>
 			)
 
-		case "img":
+		default:
 			return (
 
 				<div className={s.video} onClick={doChangeStatus}>
 					<a className={s.video__link} href={"https://youtu.be/" + props.id}>
 						<picture>
-							<source srcset={"https://i.ytimg.com/vi_webp/" + props.id + "/maxresdefault.webp"} type="image/webp" />
+							<source srcSet={getImg()} type="image/webp" />
 							<img className={s.video__media} src={"https://i.ytimg.com/vi/" + props.id + "/maxresdefault.jpg"} alt={props.title} />
 						</picture>
 					</a>
