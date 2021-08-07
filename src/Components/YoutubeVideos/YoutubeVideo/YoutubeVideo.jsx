@@ -9,12 +9,17 @@ const YoutubeVideo = (props) => {
 	};
 	const getRosolution = () => {
 		switch (props.resolution) {
-			case "mid":
-				console.log("hqdefault");
-				return "hqdefault"
+			case "maxresdefault":
+				return "maxresdefault" // 1280 X 720
+			case "sddefault":
+				return "sddefault" // 640 X 480
+			case "hqdefault":
+				return "hqdefault" // 480 X 60
+			case "mqdefault":
+				return "mqdefault" // 320 X 180
 			default:
-				return "maxresdefault"
-			
+				return "default" // 120 X 90
+
 		}
 
 	}
@@ -41,7 +46,7 @@ const YoutubeVideo = (props) => {
 					<a className={s.video__link} href={"https://youtu.be/" + props.id}>
 						<picture>
 							<source srcSet={`https://i.ytimg.com/vi_webp/${props.id}/${getRosolution()}.webp`} type="image/webp" />
-							<img className={s.video__media} src={"https://i.ytimg.com/vi/" + props.id + "/" + getRosolution() + ".jpg"} alt={props.title} />
+							<img className={s.video__media} src={`https://i.ytimg.com/vi/${props.id}/${getRosolution()}.jpg`} alt={props.title} />
 						</picture>
 					</a>
 					<button className={s.video__button} aria-label="Запустить видео">

@@ -1,26 +1,19 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import YoutubeVideo from "./YoutubeVideo/YoutubeVideo";
-import { statusvideo, consolevideo } from "./YoutubeVideosSlice";
+import { statusvideo } from "./YoutubeVideosSlice";
 
 const YoutubeVideos = () => {
 	
-	let { stateTmp, setStateTmp } = useState();
+	let  [stateTmp, setStateTmp ] = useState(0);
 
 	let dispatch = useDispatch();
 
 	
 	let videos = useSelector((state) => state.yotubevideos.videos);
 	
-	let stateTest = useSelector((state) => state.yotubevideos);
-	
-	
-
 	const changeStatus = (idStatus) => {
 		dispatch(statusvideo(idStatus));
-		dispatch(consolevideo("hello"));
-		console.log();
-		setStateTmp(stateTest);
 		
 	}
 

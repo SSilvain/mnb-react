@@ -8,35 +8,35 @@ export const slice = createSlice({
                 id: "976LGx9NP0A",
                 title: "Allsa",
                 status: "img",
-                resolution: "max",
-                idStatus: 0
+                resolution: "maxresdefault",
+                idStatus: 0,
             },
             {
                 id: "r-VXB9LRMoo",
                 title: "Ne zalishaj",
                 status: "img",
-                resolution: "max",
+                resolution: "maxresdefault",
                 idStatus: 1,
             },
             {
                 id: "tgL4BUJAgEo",
                 title: "Kintseva zupynka",
                 status: "img",
-                resolution: "max",
+                resolution: "maxresdefault",
                 idStatus: 2,
             },
             {
                 id: "5MkNL1S75fU",
                 title: "Ot sebyz",
                 status: "img",
-                resolution: "max",
+                resolution: "maxresdefault",
                 idStatus: 3,
             },
             {
                 id: "SQkI6b4tBYU",
                 title: "Z toboyu",
                 status: "img",
-                resolution: "mid",
+                resolution: "hqdefault",
                 idStatus: 4,
             },
         ],
@@ -46,13 +46,9 @@ export const slice = createSlice({
             state.videos[action.payload].status = "video";
             return state;
         },
-        consolevideo: (state, action) => {
-            console.log(action);
-            return state;
-        }
     },
 });
 
-export const { statusvideo, consolevideo } = slice.actions;
+export const { statusvideo } = slice.actions;
 // export const selectVideos = (state) => state.yotubevideos.videos;
 export default slice.reducer;
