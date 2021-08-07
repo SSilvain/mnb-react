@@ -1,13 +1,13 @@
 const ListenOnStreaming = () => {
 	return (
-		<div class="digital-wrap">
+		<div className="digital-wrap">
 			<picture>
 				<source
 					srcset="img/cross-shadow.svg"
 					type="image/webp"
 				/>
 				<img
-					class="min-logo"
+					className="min-logo"
 					src="img/cross-shadow.svg"
 					alt="logo"
 				/>
@@ -15,7 +15,7 @@ const ListenOnStreaming = () => {
 			<a
 				target="_blank"
 				href="https://ffm.to/mv6z8jo"
-				class="digital-link"
+				className="digital-link"
 			>
 				Click here to listen on sreaming
 			</a>
@@ -25,7 +25,7 @@ const ListenOnStreaming = () => {
 					type="image/webp"
 				/>
 				<img
-					class="min-logo"
+					className="min-logo"
 					src="img/cross-shadow.svg"
 					alt="logo"
 				/>

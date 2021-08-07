@@ -16,36 +16,37 @@ function App() {
             <Helmet>
                 <title>MADNOTBAD</title>
             </Helmet>
-            <div class="container">
-                <div class="logo-wrap">
-                    <h2 class="logo-h2">MADNOTBAD</h2>
+            
+            <div className="container">
+                <div className="logo-wrap">
+                    <h2 className="logo-h2">MADNOTBAD</h2>
                     <picture>
                         <source
                             srcset="img/cross-shadow.svg"
                             type="image/webp"
                         />
                         <img
-                            class="big-logo"
+                            className="big-logo"
                             src="img/cross-shadow.svg"
                             alt="logo"
                         />
                     </picture>
 
-                    <h2 class="logo-h2">MADNOTBAD</h2>
+                    <h2 className="logo-h2">MADNOTBAD</h2>
                 </div>
 
                 <div id="app">
                     <Social />
                     <ListenOnStreaming />
                     <YoutubeVideos />
-                    <div class="digital-wrap">
+                    <div className="digital-wrap">
                         <picture>
                             <source
                                 srcset="img/cross-shadow.svg"
                                 type="image/webp"
                             />
                             <img
-                                class="min-logo"
+                                className="min-logo"
                                 src="img/cross-shadow.svg"
                                 alt="logo"
                             />
@@ -59,7 +60,7 @@ function App() {
                                 type="image/webp"
                             />
                             <img
-                                class="min-logo"
+                                className="min-logo"
                                 src="img/cross-shadow.svg"
                                 alt="logo"
                             />

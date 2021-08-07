@@ -15,7 +15,7 @@ const YoutubeVideos = () => {
 		dispatch(consolevideo("hello"));
 	}
 
-	return videos.map((v) => { return <YoutubeVideo idStatus={v.idStatus} id={v.id} title={v.title} status={v.status} changeStatus={changeStatus} /> });
+	return videos.map((v) => { return <YoutubeVideo idStatus={v.idStatus} key={v.idStatus} id={v.id} title={v.title} status={v.status} changeStatus={changeStatus} /> });
 }
 
 
