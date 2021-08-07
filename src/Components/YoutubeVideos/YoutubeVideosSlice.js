@@ -8,37 +8,42 @@ export const slice = createSlice({
                 id: "976LGx9NP0A",
                 title: "Allsa",
                 status: "img",
+                resolution: "max",
                 idStatus: 0
             },
             {
                 id: "r-VXB9LRMoo",
                 title: "Ne zalishaj",
                 status: "img",
+                resolution: "max",
                 idStatus: 1,
             },
             {
                 id: "tgL4BUJAgEo",
                 title: "Kintseva zupynka",
                 status: "img",
+                resolution: "max",
                 idStatus: 2,
             },
             {
                 id: "5MkNL1S75fU",
                 title: "Ot sebyz",
                 status: "img",
+                resolution: "max",
                 idStatus: 3,
             },
             {
                 id: "SQkI6b4tBYU",
                 title: "Z toboyu",
                 status: "img",
+                resolution: "mid",
                 idStatus: 4,
             },
         ],
     },
     reducers: {
         statusvideo: (state, action) => {
-            // state.videos[action.payload].status = "video";
+            state.videos[action.payload].status = "video";
             return state;
         },
         consolevideo: (state, action) => {

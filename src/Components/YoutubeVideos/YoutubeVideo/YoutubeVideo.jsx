@@ -7,20 +7,15 @@ const YoutubeVideo = (props) => {
 	const doChangeStatus = () => {
 		props.changeStatus(props.idStatus);
 	};
-	const getImg = () => {
-		fetch(`https://i.ytimg.com/vi_webp/${props.id}/maxresdefault.webp`, {
-			method: 'get', // GET, POST, PUT, DELETE, etc.
-			mode: 'no-cors', // no-cors, *cors, same-origin
-		})
-			.then(response => console.log(response))
-			// .then(data => console.log(data));
-		// console.log(tmpFetch.status);
-		// var img = new Image();
-		// img.src = `https://i.ytimg.com/vi_webp/${props.id}/maxresdefault.webp`;
-		// img.onload = function () { console.log("load") };
-		// img.onerror = function () { console.log("error") };
-
-		return `https://i.ytimg.com/vi_webp/${props.id}/maxresdefault.webp`;
+	const getRosolution = () => {
+		switch (props.resolution) {
+			case "mid":
+				console.log("hqdefault");
+				return "hqdefault"
+			default:
+				return "maxresdefault"
+			
+		}
 
 	}
 
@@ -45,8 +40,8 @@ const YoutubeVideo = (props) => {
 				<div className={s.video} onClick={doChangeStatus}>
 					<a className={s.video__link} href={"https://youtu.be/" + props.id}>
 						<picture>
-							<source srcSet={getImg()} type="image/webp" />
-							<img className={s.video__media} src={"https://i.ytimg.com/vi/" + props.id + "/maxresdefault.jpg"} alt={props.title} />
+							<source srcSet={`https://i.ytimg.com/vi_webp/${props.id}/${getRosolution()}.webp`} type="image/webp" />
+							<img className={s.video__media} src={"https://i.ytimg.com/vi/" + props.id + "/" + getRosolution() + ".jpg"} alt={props.title} />
 						</picture>
 					</a>
 					<button className={s.video__button} aria-label="Запустить видео">

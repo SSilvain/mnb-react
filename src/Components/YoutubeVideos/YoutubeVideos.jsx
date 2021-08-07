@@ -24,7 +24,7 @@ const YoutubeVideos = () => {
 		
 	}
 
-	return videos.map((v) => { return <YoutubeVideo idStatus={v.idStatus} key={v.idStatus} id={v.id} title={v.title} status={v.status} changeStatus={changeStatus} /> });
+	return videos.map((v) => { return <YoutubeVideo resolution={v.resolution} idStatus={v.idStatus} key={v.idStatus} id={v.id} title={v.title} status={v.status} changeStatus={changeStatus} /> });
 }
 
 
