@@ -140,24 +140,10 @@ body {
     transition: 0.1s;
 }
 
-.social a:hover {
+.social a:hover, .social a:focus {
     opacity: 0.8;
 }
 
-.youtube-video {
-    margin-top: 35px;
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-}
-
-.youtube-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
 footer {
     text-align: center;
@@ -324,4 +310,23 @@ footer {
 
 .webp .services__youtube_music {
     /* background-image: url(./src/services/youtube_music.webp); */
+}
+
+/* modal animation enter and exit */
+.page-enter {
+    opacity: 0;
+}
+
+.page-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+/* .page-exit {
+    opacity: 1;
+} */
+
+.page-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
 }
