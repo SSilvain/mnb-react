@@ -45,7 +45,7 @@ export const slice = createSlice({
         statusvideo: (state, action) => {
             // state.videos[action.payload].status = "video";
             
-            state.videos = state.videos.filter((v, index) => { if (index === action.payload) { v.status = "video" } return true });
+
             return state; 
         },
     },
