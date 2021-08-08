@@ -44,9 +44,7 @@ export const slice = createSlice({
     reducers: {
         statusvideo: (state, action) => {
             state.videos[action.payload].status = "video";
-            
-
-            return state; 
+            return state;
         },
     },
 });
